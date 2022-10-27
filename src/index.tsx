@@ -55,7 +55,7 @@ class MonthViewCalendar extends React.Component<MonthViewProps, MonthViewState> 
 
     constructor(props: MonthViewProps) {
         super(props);
-        this.pageOffset = 2;
+        this.pageOffset = 6;
         this.currentPageIndex = this.pageOffset;
         this.eventsGridScrollX = new Animated.Value(0);
         this.movingScroll = false;
