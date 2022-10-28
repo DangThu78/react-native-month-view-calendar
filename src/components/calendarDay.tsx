@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         width: '14.2857142857%',
         borderColor: '#CCCCCC',
         borderRightWidth: 1,
-        minHeight: 65,
+        minHeight: 80,
         paddingTop: 3,
         paddingHorizontal: 1.5,
     },
