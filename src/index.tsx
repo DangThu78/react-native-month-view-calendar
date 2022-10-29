@@ -55,7 +55,7 @@ class MonthViewCalendar extends React.Component<MonthViewProps, MonthViewState> 
 
     constructor(props: MonthViewProps) {
         super(props);
-        this.pageOffset = 6;
+        this.pageOffset = 2;
         this.currentPageIndex = this.pageOffset;
         this.eventsGridScrollX = new Animated.Value(0);
         this.movingScroll = false;
@@ -74,7 +74,7 @@ class MonthViewCalendar extends React.Component<MonthViewProps, MonthViewState> 
     calculateInitialDates = (date: Date): void => {
         const initialDates: Date[] = [];
 
-        for (let i = -this.pageOffset; i <= this.pageOffset; i += 1) {
+        for (let i = -1; i <= 12; i += 1) {
             const centralDate = new Date(date);
             centralDate.setMonth(centralDate.getMonth() + i);
             initialDates.push(centralDate);
@@ -286,7 +286,7 @@ MonthViewCalendar.defaultProps = {
 
 const styles = StyleSheet.create({
     calendarContainer: {
-        minHeight: 400,
+        minHeight: 500,
         width: '100%',
     },
 })
